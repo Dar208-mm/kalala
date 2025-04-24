@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el idioma del documento como español -->
+
+<head>
+    <!-- Metaetiquetas para la codificación y la adaptación al dispositivo -->
+    <meta charset="UTF-8" /> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Hace que la página sea responsive, ajustándose al tamaño de la pantalla del dispositivo -->
+
+    <!-- Enlaza el archivo de JavaScript para la funcionalidad de contacto -->
+    <script src="js/contacto.js" defer></script>
+    <!-- El atributo defer asegura que el script se ejecute después de que el HTML se haya cargado -->
+
+    <title>Contacto - Kalala</title> <!-- Título que se mostrará en la pestaña del navegador -->
+
+    <!-- Enlaza el archivo CSS que contiene los estilos para la página de contacto -->
+    <link rel="stylesheet" href="css/contacto.css" /> <!-- Enlace al archivo de estilos CSS -->
+</head>
+
+<body>
+    <!-- Sección de encabezado con la barra de navegación -->
+    <header class="header">
+        <nav class="header__nav nav">
+            <!-- Logo de la página -->
+            <div class="nav__logo">
+                <img src="assets/logo.svg" alt="logokalala" /> <!-- Imagen del logo con texto alternativo -->
+            </div>
+
+            <!-- Íconos del menú hamburguesa (para pantallas pequeñas) -->
+            <div class="nav__menu-icon" id="menuToggle">
+                <span></span> <!-- Línea del menú hamburguesa -->
+                <span></span> <!-- Línea del menú hamburguesa -->
+                <span></span> <!-- Línea del menú hamburguesa -->
+            </div>
+
+            <!-- Lista de enlaces de navegación -->
+            <ul class="nav__list" id="popupMenu">
+                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li> <!-- Enlace al inicio -->
+                <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+                <!-- Enlace a la página de contacto (actual página) -->
+                <li class="nav__item"><a href="index.html#reservation" class="nav__link">Reserva</a></li>
+                <!-- Enlace para hacer una reserva -->
+                <li class="nav__item"><a href="about.html" class="nav__link">Nosotros</a></li>
+                <!-- Enlace a la sección "Nosotros" -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Banner de Contacto -->
+    <section class="hero">
+        <img src="assets/cabecera-02.jpg" alt="Pareja brindando" class="hero__image" />
+        <!-- Imagen del banner de contacto con texto alternativo -->
+    </section>
+
+    <!-- Sección con Mapa y Información de Contacto -->
+    <section class="contact">
+        <div class="contact__container">
+            <!-- Contenedor para el mapa -->
+            <div class="contact__map" id="map-container"></div>
+            <!-- Espacio donde se mostrará el mapa (se insertará por JavaScript) -->
+
+            <div class="contact__info">
+                <!-- Título de la información de contacto -->
+                <h2 class="contact__info-title">Contactanos</h2>
+
+                <!-- Descripción sobre cómo contactar -->
+                <p class="contact__info-description">
+                    ¿Tienes ganas de una noche diferente?
+                    En Kalala Urban Lounge, te esperamos con una carta exclusiva de tragos cuidadosamente preparados
+                    para que cada sorbo sea una experiencia.
+
+                    Estamos en el corazón de Valencia, en una ubicación perfecta para empezar o terminar la noche.
+                </p>
+
+                <!-- Línea divisoria -->
+                <hr class="contact__divider" />
+
+                <!-- Dirección del local -->
+                <p class="contact__address">
+                    <strong>Carrer de Borriana, 33, L'Eixample, 6005 València.</strong> <!-- Dirección en negrita -->
+                </p>
+
+                <!-- Número de teléfono de contacto -->
+                <p class="contact__phone" id="phone">
+                    <a href="tel:+34610171867">+34 610 171 867</a>
+                    <!-- Enlace que permite llamar directamente desde el teléfono -->
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página con derechos reservados -->
+    <footer class="footer">
+        <p class="footer__text">© 2025 Refugio. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

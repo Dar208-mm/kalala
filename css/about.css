@@ -1,0 +1,269 @@
+/* ==========================
+   RESET BÁSICO: Normaliza la apariencia de los elementos en todos los navegadores.
+   ========================== */
+   * {
+    margin: 0; /* Elimina los márgenes por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    border: 0; /* Elimina los bordes por defecto */
+    box-sizing: border-box; /* Ajusta el modelo de caja para todos los elementos */
+}
+
+:root {
+    font-size: 100%; /* Establece el tamaño de fuente base para usar unidades relativas */
+}
+
+html {
+    scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; /* Hereda el tamaño de fuente del contenedor */
+    font-weight: inherit; /* Hereda el peso de la fuente */
+}
+
+li {
+    list-style: none; /* Elimina los puntos de lista */
+}
+
+a {
+    color: inherit; /* Hereda el color del contenedor */
+    text-decoration: none; /* Elimina el subrayado */
+    display: block; /* Hace que el enlace sea un bloque (para poder darle dimensiones) */
+}
+
+p a {
+    display: inline; /* Los enlaces dentro de los párrafos se muestran en línea */
+    text-decoration: underline; /* Subraya los enlaces dentro de los párrafos */
+}
+
+img, picture, video, iframe, svg {
+    display: block; /* Asegura que los elementos multimedia se muestren como bloques */
+    width: 100%; /* Hace que los elementos ocupen el 100% del ancho disponible */
+}
+
+svg {
+    color: currentColor; /* Establece el color del SVG según el color actual del texto */
+}
+
+form, input, label, select, option, textarea, button {
+    font-family: inherit; /* Hereda la fuente */
+    font-size: inherit; /* Hereda el tamaño de la fuente */
+    font-weight: inherit; /* Hereda el peso de la fuente */
+    color: inherit; /* Hereda el color del texto */
+    display: block; /* Hace que estos elementos sean bloques */
+    width: 100%; /* Hace que estos elementos ocupen el 100% del ancho disponible */
+    background-color: transparent; /* Establece el fondo transparente */
+}
+
+/* ==========================
+   FIN RESET
+   ========================== */
+
+/* ==========================
+   Body: Estilo básico para el cuerpo de la página
+   ========================== */
+body {
+    background-color: #140000; /* Fondo oscuro para el cuerpo */
+    color: #ffffff; /* Color de texto blanco */
+    font-family: "Montserrat", sans-serif; /* Fuente tipográfica Montserrat */
+    line-height: 1.6; /* Espaciado entre líneas de texto */
+}
+
+/* ==========================
+   Header / Nav: Estilos para la barra de navegación
+   ========================== */
+.header {
+    background-color: #0b0303; /* Fondo oscuro para el encabezado */
+}
+
+.header__nav {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 1rem 2rem; /* Espaciado interno */
+}
+
+.nav__logo {
+    width: 3.125rem; /* Ancho del logo */
+}
+
+.nav__list {
+    display: flex; /* Usa flexbox para la lista de navegación */
+    list-style: none; /* Elimina los puntos de lista */
+    gap: 1.5rem; /* Espacio entre los elementos de la lista */
+    font-family: "Montserrat", sans-serif; /* Usa la fuente Montserrat */
+}
+
+.nav__link {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #fff; /* Color blanco para los enlaces */
+}
+
+/* ==========================
+   Botón hamburguesa: Menú móvil
+   ========================== */
+.nav__menu-icon {
+    display: none; /* Oculta el menú hamburguesa por defecto en pantallas grandes */
+    flex-direction: column; /* Organiza las barras del menú en columna */
+    justify-content: space-around; /* Espaciado entre las barras */
+    width: 25px; /* Ancho del botón hamburguesa */
+    height: 25px; /* Altura del botón hamburguesa */
+    cursor: pointer; /* Cambia el cursor cuando se pasa sobre el icono */
+    z-index: 1001; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+.nav__menu-icon span {
+    height: 3px; /* Grosor de las barras */
+    width: 100%; /* Las barras ocupan todo el ancho disponible */
+    background-color: white; /* Color blanco para las barras */
+    border-radius: 2px; /* Bordes redondeados para las barras */
+}
+
+/* ==========================
+   Menú popup en responsive (pantallas pequeñas)
+   ========================== */
+@media (max-width: 768px) {
+    .nav__menu-icon {
+        display: flex; /* Muestra el icono de menú hamburguesa en pantallas pequeñas */
+    }
+
+    .nav__list {
+        position: fixed; /* El menú se fija a la pantalla */
+        top: 0; /* Se posiciona en la parte superior */
+        right: 0; /* Se posiciona en el borde derecho */
+        height: 100vh; /* El menú ocupa toda la altura de la pantalla */
+        width: 70%; /* El menú ocupa el 70% del ancho */
+        background-color: #000; /* Fondo negro */
+        flex-direction: column; /* Dispone los elementos en columna */
+        align-items: center; /* Centra los elementos */
+        justify-content: center; /* Centra los elementos verticalmente */
+        gap: 30px; /* Espacio entre los elementos */
+        transform: translateX(100%); /* Oculta el menú inicialmente */
+        transition: transform 0.3s ease-in-out; /* Animación de apertura/cierre */
+        z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    }
+
+    .nav__list.open {
+        transform: translateX(0); /* Muestra el menú cuando tiene la clase "open" */
+    }
+
+    .nav__link {
+        font-size: 1.5rem; /* Aumenta el tamaño de la fuente en el menú móvil */
+        color: rgb(197, 3, 3); /* Color rojo para los enlaces */
+        text-transform: uppercase; /* Convierte el texto a mayúsculas */
+        font-weight: bold; /* Hace los enlaces en negrita */
+    }
+}
+
+/* ==========================
+   Hero Section: Imagen de encabezado
+   ========================== */
+.hero__content {
+    position: relative; /* Posiciona el contenido de la hero con respecto a su contenedor */
+    text-align: center; /* Centra el texto dentro de la hero */
+}
+
+.about__title {
+    position: absolute; /* Posiciona el título sobre la imagen */
+    top: 30%; /* Lo coloca a un 30% desde la parte superior */
+    left: 50%; /* Lo centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición horizontal para centrar */
+    color: white; /* Color blanco para el texto */
+    font-size: 2rem; /* Tamaño del texto */
+    z-index: 2; /* Asegura que el texto esté sobre la imagen */
+    height: 300px; /* Establece una altura para el área del título */
+    padding: 0.5rem 1rem; /* Espaciado alrededor del título */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.hero__image {
+    height: 300px; /* Define la altura de la imagen */
+    width: 100%; /* La imagen ocupa todo el ancho disponible */
+    object-fit: cover; /* La imagen cubre todo el área, manteniendo su proporción */
+    display: block; /* Hace que la imagen se muestre como un bloque */
+}
+
+.mobile-img {
+    display: none; /* Oculta la imagen móvil */
+}
+
+/* ==========================
+   About Section: Estilo para la sección de información
+   ========================== */
+.about {
+    max-width: 1200px; /* Define el ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 40px 20px; /* Espaciado interno */
+}
+
+.about__header {
+    z-index: .1875rem; /* Asegura que el encabezado tenga un índice z menor */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 40px; /* Margen inferior */
+}
+
+.about__title {
+    font-size: 1.25rem; /* Tamaño de fuente para el título */
+}
+
+/* ==========================
+   Contenido en 2 columnas: Divide el contenido en dos columnas flexibles
+   ========================== */
+.about__content {
+    display: flex; /* Usa flexbox para organizar las columnas */
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas pequeñas */
+    gap: 70px; /* Espacio entre las columnas */
+    margin-top: 70px; /* Espacio superior */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+/* ==========================
+   Columna de texto: Estilo para la columna de texto
+   ========================== */
+.about__text {
+    flex: 1 1 500px; /* Permite que la columna ocupe un 50% del espacio */
+    max-width: 31.25rem; /* Limita el tamaño máximo de la columna */
+}
+
+.about__logo {
+    width: 180px; /* Establece el tamaño del logo */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.about__subtitle {
+    font-size: 1.3rem; /* Tamaño del subtítulo */
+    font-weight: bold; /* Subraya el subtítulo */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+.about__paragraph {
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.about__highlight {
+    display: block; /* Hace que el texto se muestre como un bloque */
+    margin-top: 20px; /* Margen superior */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1rem; /* Tamaño de la fuente */
+    color: #d24b6c; /* Color vibrante para resaltar el texto */
+}
+
+/* ==========================
+   Columna de imagen: Estilo para la columna de imagen
+   ========================== */
+.about__image-container {
+    flex: 1 1 400px; /* La columna de la imagen ocupa el 50% del espacio */
+    max-width: 500px; /* Limita el tamaño máximo de la columna */
+}
+
+.about__image {
+    width: 100%; /* La imagen ocupa el 100% del ancho */
+    box-shadow: 0 0 20px rgba(255, 0, 100, 0.4); /* Sombra de la imagen */
+}
+
+  
+
+  
+  

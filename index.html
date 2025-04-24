@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Configuración de codificación y responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Conexión anticipada para cargar fuentes de forma optimizada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fuentes utilizadas en el sitio: Montserrat, Nunito, Quicksand, Thasadith -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Script principal que controla la navegación y la interactividad -->
+    <script src="js/index.js" defer></script>
+
+    <!-- Título del sitio en el navegador -->
+    <title>KALALA</title>
+</head>
+
+<body>
+
+    <!-- HEADER: contiene navegación principal y logo -->
+    <header class="header">
+        <nav class="header__nav nav">
+            <!-- Logo del bar Kalala -->
+            <div class="nav__logo">
+                <img src="assets/logo.svg" alt="logokalala" />
+            </div>
+
+            <!-- Icono para mostrar/ocultar el menú en móvil -->
+            <div class="nav__menu-icon" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Menú de navegación con enlaces a distintas secciones -->
+            <ul class="nav__list" id="popupMenu">
+                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+                <li class="nav__item"><a href="#reservation" class="nav__link">Reserva</a></li>
+                <li class="nav__item"><a href="about.html" class="nav__link">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO: imágenes representativas del lugar (desktop y móvil) -->
+    <section class="hero">
+        <img src="assets/pareja.jpg" alt="Pareja brindando" class="hero__image" />
+        <img src="assets/mobile.jpg" alt="Kalala lugar" class="hero__image mobile-img" />
+    </section>
+
+    <!-- MAIN: contenido principal de la página -->
+    <main class="main">
+        <!-- Sección del menú con logo, título y descripción -->
+        <section class="menu">
+            <div class="menu__logo">
+                <img src="assets/logo.svg" alt="logokalala" />
+            </div>
+
+            <div class="menu__title">
+                <hr class="menu__line" />
+                <h2 class="menu__heading">MENU</h2>
+                <hr class="menu__line" />
+            </div>
+
+            <p class="menu__description">
+                AQUÍ NO SE VIENE A TOMAR CUALQUIER COSA. SE VIENE A BEBER BIEN. CON ESTILO, CON HISTORIA, CON GANAS..
+                ECHA UN VISTAZO A LO QUE TENEMOS PREPARADO PARA VOS:
+            </p>
+
+            <!-- Primer bloque de cócteles: DE LA CASA -->
+            <div class="menu__cocktail cocktail-section">
+                <div class="cocktail-section__text">
+                    <h2 class="cocktail-section__title">
+                        <span class="cocktail-section__subtitle">Cócteles</span>
+                        <div class="cocktail-section__label">
+                            <div class="cocktail-section__line"></div>
+                            <span class="cocktail-section__label-text">DE LA CASA</span>
+                            <div class="cocktail-section__line"></div>
+                        </div>
+                    </h2>
+
+                    <!-- Lista de cócteles de la casa -->
+                    <div class="cocktail-item">
+                        <div class="cocktail-item__header">
+                            <h3 class="cocktail-item__title">REFUGIO SPRITZ</h3>
+                            <div class="cocktail-item__lines"></div>
+                            <span class="cocktail-item__price">7,00€</span>
+                        </div>
+                        <p class="cocktail-item__description">Aperol, cava valenciano, soda y un toque de romero.</p>
+                    </div>
+
+                    <div class="cocktail-item">
+                        <div class="cocktail-item__header">
+                            <h3 class="cocktail-item__title">PIMIENTA ROSA</h3>
+                            <div class="cocktail-item__lines"></div>
+                            <span class="cocktail-item__price">8,00€</span>
+                        </div>
+                        <p class="cocktail-item__description">Gin infusionado, tónica premium, bayas rosadas y pomelo.
+                        </p>
+                    </div>
+
+                    <div class="cocktail-item">
+                        <div class="cocktail-item__header">
+                            <h3 class="cocktail-item__title">MENTA & MATACUYÁ</h3>
+                            <div class="cocktail-item__lines"></div>
+                            <span class="cocktail-item__price">8,00€</span>
+                        </div>
+                        <p class="cocktail-item__description">Ron blanco, licor de maracuyá, hojas de menta y limón
+                            fresco.</p>
+                    </div>
+                </div>
+
+                <!-- Imagen destacada para esta sección -->
+                <div class="cocktail-section__image">
+                    <img class="cocktail-section__image-img" src="assets/Aperol.jpg" alt="Refugio Spritz" />
+                </div>
+            </div>
+
+            <!-- Segundo bloque de cócteles: CLÁSICOS QUE NO FALLAN -->
+            <div class="menu__cocktail cocktail-section">
+                <div class="cocktail-section__image">
+                    <img class="cocktail-section__image-img" src="assets/Negroni.jpg" alt="Negroni" />
+                </div>
+
+                <div class="cocktail-section__text">
+                    <h2 class="cocktail-section__title">
+                        <span class="cocktail-section__subtitle">CLÁSICOS QUE</span>
+                        <div class="cocktail-section__label">
+                            <div class="cocktail-section__line"></div>
+                            <span class="cocktail-section__label-text">NO FALLAN</span>
+                            <div class="cocktail-section__line"></div>
+                        </div>
+                    </h2>
+
+                    <!-- Lista de cócteles clásicos -->
+                    <div class="cocktail-item">
+                        <div class="cocktail-item__header">
+                            <h3 class="cocktail-item__title">NEGRONI</h3>
+                            <div class="cocktail-item__lines"></div>
+                            <span class="cocktail-item__price">7,50€</span>
+                        </div>
+                        <p class="cocktail-item__description">Gin, vermut rojo, Campari. Seco, fuerte y directo.</p>
+                    </div>
+
+                    <div class="cocktail-item">
+                        <div class="cocktail-item__header">
+                            <h3 class="cocktail-item__title">MARGARITA</h3>
+                            <div class="cocktail-item__lines"></div>
+                            <span class="cocktail-item__price">7,00€</span>
+                        </div>
+                        <p class="cocktail-item__description">Tequila, triple sec, lima. Con sal o sin, vos elegís.</p>
+                    </div>
+
+                    <div class="cocktail-item">
+                        <div class="cocktail-item__header">
+                            <h3 class="cocktail-item__title">ESPRESSO MARTINI</h3>
+                            <div class="cocktail-item__lines"></div>
+                            <span class="cocktail-item__price">8,00€</span>
+                        </div>
+                        <p class="cocktail-item__description">Vodka, licor de café y espresso recién hecho.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Carrusel de imágenes que se repite para dar efecto de scroll continuo -->
+    <section class="carousel">
+        <div class="carousel__track" id="carousel-track">
+            <img src="assets/carrusel.jpg" class="carousel__image" />
+            <img src="assets/bebida carrusel.jpg" class="carousel__image" />
+            <img src="assets/trago carrusel.jpg" class="carousel__image" />
+            <img src="assets/alcohol carrusel.jpg" class="carousel__image" />
+            <!-- Imágenes repetidas para loop visual -->
+            <img src="assets/carrusel.jpg" class="carousel__image" />
+            <img src="assets/bebida carrusel.jpg" class="carousel__image" />
+            <img src="assets/trago carrusel.jpg" class="carousel__image" />
+            <img src="assets/alcohol carrusel.jpg" class="carousel__image" />
+        </div>
+    </section>
+
+    <!-- Sección adicional de cócteles: whisky y destilados premium -->
+    
+
+    <section class="menu__cocktail cocktail-section">
+        <div class="cocktail-section__text">
+            <h2 class="cocktail-section__title">
+                <span class="cocktail-section__subtitle2">WHISKY</span>
+                <div class="cocktail-section__label">
+                    <div class="cocktail-section__line"></div>
+                    <span class="cocktail-section__label-text">& DESTILADOS PREMIUM</span>
+                    <div class="cocktail-section__line"></div>
+                </div>
+            </h2>
+
+            <div class="cocktail-item">
+                <div class="cocktail-item__header">
+                    <h3 class="cocktail-item__title">REFUGIO SPRITZ</h3>
+                    <div class="cocktail-item__lines"></div>
+                    <span class="cocktail-item__price">7,00€</span>
+                </div>
+                <p class="cocktail-item__description">Aperol, cava valenciano, soda y un toque de romero.</p>
+            </div>
+
+            <div class="cocktail-item">
+                <div class="cocktail-item__header">
+                    <h3 class="cocktail-item__title">PIMIENTA ROSA</h3>
+                    <div class="cocktail-item__lines"></div>
+                    <span class="cocktail-item__price">8,00€</span>
+                </div>
+                <p class="cocktail-item__description">Gin infusionado, tónica premium, bayas rosadas y pomelo.
+                </p>
+            </div>
+
+            <div class="cocktail-item">
+                <div class="cocktail-item__header">
+                    <h3 class="cocktail-item__title">MENTA & MATACUYÁ </h3>
+                    <div class="cocktail-item__lines"></div>
+                    <span class="cocktail-item__price">8,00€</span>
+                </div>
+                <p class="cocktail-item__description">Ron blanco, licor de maracuyá, hojas de menta y limón
+                    fresco
+                </p>
+            </div>
+        </div>
+        <div class="cocktail-section__image">
+            <img class="cocktail-section__image-img" src="assets/dos tragos.jpg" alt="Refugio Spritz" />
+        </div>
+    </section>
+    
+
+
+    <div class="menu__cocktail cocktail-section">
+        <div class="cocktail-section__image">
+            <img class="cocktail-section__image-img" src="assets/trago.jpg" alt="Refugio Spritz" />
+        </div>
+
+        <div class="cocktail-section__text">
+            <h2 class="cocktail-section__title">
+                <span class="cocktail-section__subtitle2">CLÁSICOS QUE</span>
+                <div class="cocktail-section__label">
+                    <div class="cocktail-section__line"></div>
+                    <span class="cocktail-section__label-text">NO FALLAN</span>
+                    <div class="cocktail-section__line"></div>
+                </div>
+            </h2>
+
+            <div class="cocktail-item">
+                <div class="cocktail-item__header">
+                    <h3 class="cocktail-item__title">NEGRONI</h3>
+                    <div class="cocktail-item__lines"></div>
+                    <span class="cocktail-item__price">7,50€</span>
+                </div>
+                <p class="cocktail-item__description">Gin, vermut rojo, Campari. Seco, fuerte y directo.</p>
+            </div>
+
+            <div class="cocktail-item">
+                <div class="cocktail-item__header">
+                    <h3 class="cocktail-item__title">MARGARITA</h3>
+                    <div class="cocktail-item__lines"></div>
+                    <span class="cocktail-item__price">7,00€</span>
+                </div>
+                <p class="cocktail-item__description">Tequila, triple sec, lima. Con sal o sin, vos elegís.
+                </p>
+            </div>
+
+            <div class="cocktail-item">
+                <div class="cocktail-item__header">
+                    <h3 class="cocktail-item__title">ESPRESSO MARTINI </h3>
+                    <div class="cocktail-item__lines"></div>
+                    <span class="cocktail-item__price">8,00€</span>
+                </div>
+                <p class="cocktail-item__description">Vodka, licor de café y espresso recién hecho. Ideal para empezar
+                    la noche (o terminarla bien).
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de reserva de mesas -->
+    <section id="reservation">
+        <h2 class="reservation__title">Reservá tu mesa</h2>
+        <form class="reservation__form" id="reservationForm">
+            <input type="text" name="name" placeholder="Tu nombre" class="reservation__input" required />
+            <input type="email" name="email" placeholder="Tu email" class="reservation__input" required />
+            <input type="tel" name="phone" placeholder="Teléfono" class="reservation__input" required />
+            <input type="date" name="date" class="reservation__input" required />
+            <input type="time" name="time" class="reservation__input" required />
+            <input type="number" name="people" placeholder="N° de personas" class="reservation__input" min="1"
+                required />
+            <textarea name="message" placeholder="Comentario opcional" class="reservation__textarea"></textarea>
+            <button type="submit" class="reservation__button">Reservar</button>
+        </form>
+        <p class="reservation__message" id="formMessage"></p>
+    </section>
+
+    <!-- Script para manejar el formulario de reservas -->
+    <script src="js/reserva.js" defer></script>
+
+    <!-- Pie de página con derechos reservados -->
+    <footer class="footer">
+        <p class="footer__text">© 2025 Refugio. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
