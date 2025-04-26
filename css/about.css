@@ -14,7 +14,7 @@
     --color-secundario:  white; /* Color secundario */
 
    --color-fondo: #1c0000;
-    --color-texto: #1c1c1c;      /* Color de texto */
+    --color-texto: #000000;      /* Color de texto */
 
     font-size: 100%; /* Establece el tamaño de fuente base */
 }
