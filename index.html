@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Configuración de codificación y responsive design -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,9 +20,33 @@
 
     <!-- Script principal que controla la navegación y la interactividad -->
     <script src="js/index.js" defer></script>
+    <!-- Título y descripción básicos -->
+    <title>Kalala - Cócteles con estilo</title>
+    <meta name="description"
+        content="Kalala: Coctelería de autor, tragos clásicos y sabores caribeños en un ambiente único. Reservá tu mesa ahora.">
+    <meta name="keywords" content="Kalala, coctelería, bar, cócteles, reservaciones, bebidas, mixología, tragos">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://tuweb.com/assets/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph (Facebook, LinkedIn, etc) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tuweb.com/">
+    <meta property="og:title" content="Kalala - Cócteles con estilo">
+    <meta property="og:description"
+        content="Cocteles de autor, clásicos y sabores caribeños. Viví la experiencia Kalala.">
+    <meta property="og:image" content="https://tuweb.com/assets/kalala-preview.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://tuweb.com/">
+    <meta name="twitter:title" content="Kalala - Cócteles con estilo">
+    <meta name="twitter:description"
+        content="Cocteles de autor, clásicos y sabores caribeños. Viví la experiencia Kalala.">
+    <meta name="twitter:image" content="https://tuweb.com/assets/kalala-preview.jpg">
 
     <!-- Título del sitio en el navegador -->
-    <title>KALALA</title>
+    <title>Kalala - Cócteles con estilo</title>
 </head>
 
 <body>
@@ -32,7 +56,7 @@
         <nav class="header__nav nav">
             <!-- Logo del bar Kalala -->
             <div class="nav__logo">
-                <img src="assets/logo.svg" alt="logokalala" />
+                <img src="assets/logo.svg" alt="logokalala">
             </div>
 
             <!-- Icono para mostrar/ocultar el menú en móvil -->
@@ -52,11 +76,34 @@
         </nav>
     </header>
 
-    <!-- HERO: imágenes representativas del lugar (desktop y móvil) -->
-    <section class="hero">
-        <img src="assets/pareja.jpg" alt="Pareja brindando" class="hero__image" />
-        <img src="assets/mobile.jpg" alt="Kalala lugar" class="hero__image mobile-img" />
-    </section>
+
+    <picture class="hero">
+        <!-- Desktop (1512×580) -->
+        <source 
+          srcset="assets/pareja.webp 1x,
+                  assets/pareja@2x.webp 2x" 
+          media="(min-width: 769px)"
+          type="image/webp"
+        >
+        
+        <!-- Mobile (1360×765) -->
+        <source 
+          srcset="assets/mobile.webp 1x,
+                  assets/mobile@2x.webp 2x"  
+          media="(max-width: 768px)"
+          type="image/webp"
+        >
+        
+        <!-- Fallback -->
+        <img
+          src="assets/pareja.webp" 
+          alt="Pareja brindando en sKalala"
+          class="hero__image"
+          loading="lazy"
+          width="1512"
+          height="580"
+        >
+      </picture>
 
     <!-- MAIN: contenido principal de la página -->
     <main class="main">
@@ -82,12 +129,13 @@
                 <div class="cocktail-section__text">
                     <h2 class="cocktail-section__title">
                         <span class="cocktail-section__subtitle">Cócteles</span>
-                        <div class="cocktail-section__label">
-                            <div class="cocktail-section__line"></div>
-                            <span class="cocktail-section__label-text">DE LA CASA</span>
-                            <div class="cocktail-section__line"></div>
-                        </div>
                     </h2>
+                    <div class="cocktail-section__label">
+                        <div class="cocktail-section__line"></div>
+                        <span class="cocktail-section__label-text">DE LA CASA</span>
+                        <div class="cocktail-section__line"></div>
+                    </div>
+
 
                     <!-- Lista de cócteles de la casa -->
                     <div class="cocktail-item">
@@ -122,25 +170,26 @@
 
                 <!-- Imagen destacada para esta sección -->
                 <div class="cocktail-section__image">
-                    <img class="cocktail-section__image-img" src="assets/Aperol.jpg" alt="Refugio Spritz" />
+                    <img class="cocktail-section__image-img" src="assets/Aperol.webp" alt="Refugio Spritz" />
                 </div>
             </div>
 
             <!-- Segundo bloque de cócteles: CLÁSICOS QUE NO FALLAN -->
             <div class="menu__cocktail cocktail-section">
                 <div class="cocktail-section__image">
-                    <img class="cocktail-section__image-img" src="assets/Negroni.jpg" alt="Negroni" />
+                    <img class="cocktail-section__image-img" src="assets/Negroni.webp" alt="Negroni" />
                 </div>
 
                 <div class="cocktail-section__text">
                     <h2 class="cocktail-section__title">
                         <span class="cocktail-section__subtitle">CLÁSICOS QUE</span>
-                        <div class="cocktail-section__label">
-                            <div class="cocktail-section__line"></div>
-                            <span class="cocktail-section__label-text">NO FALLAN</span>
-                            <div class="cocktail-section__line"></div>
-                        </div>
                     </h2>
+                    <div class="cocktail-section__label">
+                        <div class="cocktail-section__line"></div>
+                        <span class="cocktail-section__label-text">NO FALLAN</span>
+                        <div class="cocktail-section__line"></div>
+                    </div>
+
 
                     <!-- Lista de cócteles clásicos -->
                     <div class="cocktail-item">
@@ -176,32 +225,33 @@
 
     <!-- Carrusel de imágenes que se repite para dar efecto de scroll continuo -->
     <section class="carousel">
-        <div class="carousel__track" id="carousel-track">
-            <img src="assets/carrusel.jpg" class="carousel__image" />
-            <img src="assets/bebida carrusel.jpg" class="carousel__image" />
-            <img src="assets/trago carrusel.jpg" class="carousel__image" />
-            <img src="assets/alcohol carrusel.jpg" class="carousel__image" />
+        <div class="carousel__track" id="carousel-track" alt="Imagen del carrusel mostrando diferentes cócteles">
+            <img src="assets/carrusel.webp" class="carousel__image" alt="Imagen del carrusel mostrando  Whiskey" />
+            <img src="assets/bebida-carrusel.webp" class="carousel__image" alt="Imagen del carrusel mostrando  vino" />
+            <img src="assets/trago carrusel.webp" class="carousel__image"  alt="Imagen del carrusel mostrando vodka"/>
+            <img src="assets/alcohol-carrusel.webp" class="carousel__image" alt="Imagen del carrusel mostrando piña colada" />
             <!-- Imágenes repetidas para loop visual -->
-            <img src="assets/carrusel.jpg" class="carousel__image" />
-            <img src="assets/bebida carrusel.jpg" class="carousel__image" />
-            <img src="assets/trago carrusel.jpg" class="carousel__image" />
-            <img src="assets/alcohol carrusel.jpg" class="carousel__image" />
+            <img src="assets/carrusel.webp" class="carousel__image" alt="Imagen del carrusel mostrando aperol"/>
+            <img src="assets/bebida-carrusel.webp" class="carousel__image" alt="Imagen del carrusel mostrando vino" />
+            <img src="assets/trago carrusel.webp" class="carousel__image alt="Imagen del carrusel mostrando diferentes tragos"  />
+            <img src="assets/alcohol-carrusel.webp" class="carousel__image" alt="Imagen del carrusel mostrando diferentes tragos" />
         </div>
     </section>
 
     <!-- Sección adicional de cócteles: whisky y destilados premium -->
-    
+
 
     <section class="menu__cocktail cocktail-section">
         <div class="cocktail-section__text">
             <h2 class="cocktail-section__title">
                 <span class="cocktail-section__subtitle2">WHISKY</span>
-                <div class="cocktail-section__label">
-                    <div class="cocktail-section__line"></div>
-                    <span class="cocktail-section__label-text">& DESTILADOS PREMIUM</span>
-                    <div class="cocktail-section__line"></div>
-                </div>
             </h2>
+            <div class="cocktail-section__label">
+                <div class="cocktail-section__line"></div>
+                <span class="cocktail-section__label-text">& DESTILADOS PREMIUM</span>
+                <div class="cocktail-section__line"></div>
+            </div>
+
 
             <div class="cocktail-item">
                 <div class="cocktail-item__header">
@@ -233,15 +283,15 @@
             </div>
         </div>
         <div class="cocktail-section__image">
-            <img class="cocktail-section__image-img" src="assets/dos tragos.jpg" alt="Refugio Spritz" />
+            <img class="cocktail-section__image-img" src="assets/dos tragos.webp" alt="Refugio Spritz" />
         </div>
     </section>
-    
+
 
 
     <div class="menu__cocktail cocktail-section">
         <div class="cocktail-section__image">
-            <img class="cocktail-section__image-img" src="assets/trago.jpg" alt="Refugio Spritz" />
+            <img class="cocktail-section__image-img" src="assets/trago.webp" alt="Refugio Spritz" />
         </div>
 
         <div class="cocktail-section__text">
@@ -291,20 +341,36 @@
 
     <!-- Sección de reserva de mesas -->
     <section id="reservation">
-        <h2 class="reservation__title">Reservá tu mesa</h2>
-        <form class="reservation__form" id="reservationForm">
-            <input type="text" name="name" placeholder="Tu nombre" class="reservation__input" required />
-            <input type="email" name="email" placeholder="Tu email" class="reservation__input" required />
-            <input type="tel" name="phone" placeholder="Teléfono" class="reservation__input" required />
-            <input type="date" name="date" class="reservation__input" required />
-            <input type="time" name="time" class="reservation__input" required />
-            <input type="number" name="people" placeholder="N° de personas" class="reservation__input" min="1"
-                required />
-            <textarea name="message" placeholder="Comentario opcional" class="reservation__textarea"></textarea>
-            <button type="submit" class="reservation__button">Reservar</button>
+        <h2 class="reservation__title">Reserva tu mesa</h2>
+        <form class="reservation__form" id="reservationForm" action="#" method="post">
+      
+          <label for="name" class="visually-hidden">Tu nombre</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" class="reservation__input" required>
+      
+          <label for="email" class="visually-hidden">Tu email</label>
+          <input type="email" id="email" name="email" placeholder="Tu email" class="reservation__input" required>
+      
+          <label for="phone" class="visually-hidden">Teléfono</label>
+          <input type="tel" id="phone" name="phone" placeholder="Teléfono" class="reservation__input" required>
+      
+          <label for="date" class="visually-hidden">Fecha</label>
+          <input type="date" id="date" name="date" class="reservation__input" required>
+      
+          <label for="time" class="visually-hidden">Hora</label>
+          <input type="time" id="time" name="time" class="reservation__input" required>
+      
+          <label for="people" class="visually-hidden">Número de personas</label>
+          <input type="number" id="people" name="people" placeholder="N° de personas" class="reservation__input" min="1" required>
+      
+          <label for="message" class="visually-hidden">Comentario opcional</label>
+          <textarea id="message" name="message" placeholder="Comentario opcional" class="reservation__textarea"></textarea>
+      
+          <button type="submit" class="reservation__button" title="Enviar reserva">Reservar</button>
+
         </form>
         <p class="reservation__message" id="formMessage"></p>
-    </section>
+      </section>
+      
 
     <!-- Script para manejar el formulario de reservas -->
     <script src="js/reserva.js" defer></script>
