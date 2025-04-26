@@ -11,6 +11,17 @@
 
 :root {
     font-size: 100%;
+  /* Establece el tamaño de fuente base */
+  --color-principal: rgb(197, 3, 3);
+  /* Color principal */
+  --color-secundario: white;
+  /* Color secundario */
+
+  --color-fondo: #140000;
+  /* Color de fondo */
+  --color-texto: #000000;
+  /* Color de texto */
+
 }
 
 html {
@@ -60,14 +71,14 @@ form, input, label, select, option, textarea, button {
 
 /* Body */
 body {
-    background-color: #140000; /* Color de fondo oscuro */
+    background-color: var(--color-fondo); /* Color de fondo oscuro */
     font-family: "Montserrat", sans-serif; /* Fuente de texto principal */
     line-height: 1.6; /* Espaciado entre líneas */
 }
 
 /* Header / Nav */
 .header {
-    background-color: #0b0303; /* Fondo oscuro para el encabezado */
+    background-color:var(--color-texto); /* Fondo oscuro para el encabezado */
 }
 
 .header__nav {
@@ -90,7 +101,7 @@ body {
 
 .nav__link {
     text-decoration: none; /* Elimina el subrayado en los enlaces */
-    color: #fff; /* Color blanco para los enlaces */
+    color:  var(--color-secundario); /* Color blanco para los enlaces */
     font-family: "Montserrat", sans-serif; /* Fuente para los enlaces */
 }
 
@@ -99,17 +110,17 @@ body {
     display: none; /* Oculta el botón de menú en dispositivos grandes */
     flex-direction: column; /* Flexbox vertical */
     justify-content: space-around; /* Espaciado entre las líneas del menú */
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
     cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa sobre el botón */
-    z-index: 1001; /* Asegura que el botón de menú se muestre por encima de otros elementos */
+    z-index: 90; /* Asegura que el botón de menú se muestre por encima de otros elementos */
 }
 
 .nav__menu-icon span {
-    height: 3px;
+    height: .1875rem;
     width: 100%;
-    background-color: white; /* Color de las líneas del menú hamburguesa */
-    border-radius: 2px; /* Bordes redondeados para las líneas */
+    background-color: var(--color-secundario); /* Color de las líneas del menú hamburguesa */
+    border-radius: .125rem; /* Bordes redondeados para las líneas */
 }
 
 /* Menú popup en responsive */
@@ -124,11 +135,11 @@ body {
         right: 0;
         height: 100vh; /* Hace que el menú ocupe toda la altura de la pantalla */
         width: 70%; /* Establece el ancho del menú */
-        background-color: #000; /* Fondo negro para el menú */
+        background-color:var(--color-fondo); /* Fondo negro para el menú */
         flex-direction: column; /* Organiza los enlaces verticalmente */
         align-items: center; /* Alinea los elementos en el centro */
         justify-content: center; /* Centra los elementos verticalmente */
-        gap: 30px; /* Espaciado entre los elementos */
+        gap: 1.875rem; /* Espaciado entre los elementos */
         transform: translateX(100%); /* Inicialmente el menú está fuera de la pantalla */
         transition: transform 0.3s ease-in-out; /* Animación para abrir/cerrar el menú */
         z-index: 1000; /* Asegura que el menú se muestre por encima de otros elementos */
@@ -140,7 +151,7 @@ body {
 
     .nav__link {
         font-size: 1.5rem; /* Tamaño de fuente mayor en dispositivos pequeños */
-        color: rgb(179, 3, 35); /* Color de los enlaces en el menú */
+        color:var(--color-principal); /* Color de los enlaces en el menú */
         text-transform: uppercase; /* Texto en mayúsculas */
         font-weight: bold; /* Texto en negrita */
     }
@@ -153,7 +164,7 @@ body {
 }
 
 .hero__image {
-    height: 300px; /* Altura fija para la imagen */
+    height: 18.75rem; /* Altura fija para la imagen */
     width: 100%; /* La imagen ocupa el 100% del ancho */
     object-fit: cover; /* Hace que la imagen cubra todo el espacio disponible sin distorsionarse */
     display: block; /* Asegura que la imagen sea un bloque */
@@ -161,8 +172,8 @@ body {
 
 /* Sección principal de contacto */
 .contact {
-    background-color: #f5f5f5; /* Fondo gris claro */
-    padding: 60px 20px; /* Espaciado dentro de la sección */
+    background-color:var(--color-secundario); /* Fondo gris claro */
+    padding: 3.75rem 1.25rem; /* Espaciado dentro de la sección */
 }
 
 .contact__container {
@@ -170,7 +181,7 @@ body {
     flex-wrap: nowrap; /* Los elementos no deben envolverse */
     max-width: 80%; /* Limita el ancho máximo de los elementos */
     margin: 0 auto; /* Centra el contenedor */
-    gap: 20px; /* Espaciado entre los elementos */
+    gap: 1.25rem; /* Espaciado entre los elementos */
 }
 
 .contact__map {
@@ -179,43 +190,43 @@ body {
 
 .contact__map-image {
     width: 100%;
-    border-radius: 6px; /* Bordes redondeados para la imagen del mapa */
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); /* Sombra sutil alrededor de la imagen */
+    border-radius: .375rem; /* Bordes redondeados para la imagen del mapa */
+    box-shadow: 0 .125rem .75rem rgba(0, 0, 0, 0.2); /* Sombra sutil alrededor de la imagen */
 }
 
 .contact__info {
-    background: white; /* Fondo blanco */
-    padding: 30px; /* Espaciado dentro del contenedor */
-    border-radius: 6px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del contenedor */
+    background:var(--color-secundario); /* Fondo blanco */
+    padding: 1.875rem; /* Espaciado dentro del contenedor */
+    border-radius: .375rem; /* Bordes redondeados */
+    box-shadow: 0 .25rem .625rem rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del contenedor */
     flex: 1 1 45%; /* Toma el 45% del ancho disponible */
 }
 
 .contact__info-title {
     font-size: 1.8rem; /* Tamaño de fuente para el título */
     font-weight: bold; /* Texto en negrita */
-    margin-bottom: 10px; /* Espaciado debajo del título */
+    margin-bottom: .625rem; /* Espaciado debajo del título */
 }
 
 .contact__info-description {
-    margin-bottom: 20px; /* Espaciado debajo de la descripción */
+    margin-bottom: 1.25rem; /* Espaciado debajo de la descripción */
     line-height: 1.5; /* Espaciado entre líneas */
     color: #333; /* Color de texto oscuro */
 }
 
 .contact__divider {
     border: none;
-    border-top: 1px solid #ccc; /* Línea divisoria */
-    margin: 20px 0; /* Espaciado arriba y abajo de la línea */
+    border-top: .0625rem solid #ccc; /* Línea divisoria */
+    margin: 1.25rem 0; /* Espaciado arriba y abajo de la línea */
 }
 
 .contact__address {
     font-weight: bold; /* Negrita para la dirección */
-    margin-bottom: 10px; /* Espaciado debajo de la dirección */
+    margin-bottom: .625rem; /* Espaciado debajo de la dirección */
 }
 
 .contact__phone a {
-    color: #e4002b; /* Color rojo para el número de teléfono */
+    color:var(--color-principal); /* Color rojo para el número de teléfono */
     font-weight: bold; /* Negrita para el número */
     text-decoration: none; /* Elimina el subrayado */
 }
