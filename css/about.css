@@ -80,7 +80,7 @@ body {
    Header / Nav: Estilos para la barra de navegación
    ========================== */
 .header {
-    background-color: var(--color-fondo); /* Fondo oscuro para el encabezado */
+    background-color: var(--color-texto); /* Fondo oscuro para el encabezado */
 }
 
 .header__nav {
